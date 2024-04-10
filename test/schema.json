@@ -1,0 +1,51 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Distribution Question and Answer",
+    "description": "A candy distribution problem and its associated solution",
+    "type": "object",
+    "properties": {
+        "scenario": {
+            "description": "The scenario",
+            "type": "object",
+            "properties": {
+                "children": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "number"
+                            },
+                            "sugarTolerance": {
+                                "type": "number"
+                            },
+                            "HFCSTolerance": {
+                                "type": "number"
+                            },
+                            "pvsLimit": {
+                                "type": "number"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "answer": {
+            "type": "array",
+            "items": {
+                "type": "array",
+                "items": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {
+                        "type": "number"
+                    }
+                }
+            }
+        }
+    },
+    "additionalProperties": false,
+    "minProperties": 2,
+    "maxProperties": 2
+}

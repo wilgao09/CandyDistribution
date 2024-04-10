@@ -6,7 +6,7 @@ import {
     Child,
     ChildID,
     Scenario,
-} from "../app/types";
+} from "./types";
 
 export default class ScenarioBuilder {
     private scenario: Scenario;

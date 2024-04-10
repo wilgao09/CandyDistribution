@@ -1,0 +1,14 @@
+{
+    "scenario": {
+        "children": [{
+            ""
+        }],
+        "candy": [],
+        "badCombinations": [],
+        "carrot": {}
+    },
+    "answer": [
+        [[1,2]],
+        [[2,1]]
+    ]
+}

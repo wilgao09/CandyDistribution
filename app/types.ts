@@ -38,7 +38,7 @@ interface Scenario {
     children: Child[];
     candy: Candy[];
     badCombinations: [CandyType, CandyType][];
-    ghost: Child;
+    carrot: Candy;
 }
 
 const CARROT: Candy = {
