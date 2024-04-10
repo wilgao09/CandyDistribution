@@ -1,14 +1,34 @@
 {
     "scenario": {
-        "children": [{
-            ""
-        }],
-        "candy": [],
+        "children": [
+            {
+                "id": 0,
+                "pvsLimit": 6,
+                "HFCSTolerance": 8,
+                "sugarTolerance": 2
+            }
+        ],
+        "candy": [
+            {
+                "id": 0,
+                "HFCS": 4,
+                "naturalSugar": 1,
+                "type": "PVS",
+                "favoriteChild": -1,
+                "owner": 0,
+                "state": "STICKY"
+            }
+        ],
         "badCombinations": [],
-        "carrot": {}
+        "carrot": {
+            "favoriteChild": -1,
+            "HFCS": 0,
+            "id": -1,
+            "naturalSugar": 0,
+            "owner": -1,
+            "state": "SLIPPERY",
+            "type": "CARROT"
+        }
     },
-    "answer": [
-        [[1,2]],
-        [[2,1]]
-    ]
+    "answer": []
 }

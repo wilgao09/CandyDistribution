@@ -2,6 +2,70 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Distribution Question and Answer",
     "description": "A candy distribution problem and its associated solution",
+    "$defs": {
+        "child": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number"
+                },
+                "sugarTolerance": {
+                    "type": "number",
+                    "default": 2
+                },
+                "HFCSTolerance": {
+                    "type": "number",
+                    "default": 8
+                },
+                "pvsLimit": {
+                    "type": "number",
+                    "default": 6
+                }
+            },
+            "additionalProperties": false,
+            "minProperties": 4,
+            "maxProperties": 4
+        },
+        "candyType": {
+            "type": "string",
+            "enum": ["PVS", "DMZ", "FDR", "JFK", "CARROT"]
+        },
+        "candyState": {
+            "type": "string",
+            "enum": ["STICKY", "SMOOTH", "SLIPPERY"],
+            "default": "STICKY"
+        },
+        "candy": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number"
+                },
+                "naturalSugar": {
+                    "type": "number"
+                },
+                "HFCS": {
+                    "type": "number"
+                },
+                "favoriteChild": {
+                    "type": "number",
+                    "default": -1
+                },
+                "state": {
+                    "$ref": "#/$defs/candyState"
+                },
+                "owner": {
+                    "type": "number"
+                },
+                "type": {
+                    "$ref": "#/$defs/candyType"
+                }
+            },
+            "additionalProperties": false,
+            "minProperties": 7,
+            "maxProperties": 7
+        }
+    },
     "type": "object",
     "properties": {
         "scenario": {
@@ -11,24 +75,33 @@
                 "children": {
                     "type": "array",
                     "items": {
-                        "type": "object",
-                        "properties": {
-                            "id": {
-                                "type": "number"
-                            },
-                            "sugarTolerance": {
-                                "type": "number"
-                            },
-                            "HFCSTolerance": {
-                                "type": "number"
-                            },
-                            "pvsLimit": {
-                                "type": "number"
-                            }
+                        "$ref": "#/$defs/child"
+                    }
+                },
+                "candy": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/candy"
+                    }
+                },
+                "badCombinations": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "number",
+                            "minItems": 2,
+                            "maxItems": 2
                         }
                     }
+                },
+                "carrot": {
+                    "$ref": "#/$defs/candy"
                 }
-            }
+            },
+            "additionalProperties": false,
+            "minProperties": 4,
+            "maxProperties": 4
         },
         "answer": {
             "type": "array",

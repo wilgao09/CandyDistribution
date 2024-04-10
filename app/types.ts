@@ -1,7 +1,7 @@
 enum CandyState {
-    STICKY,
-    SMOOTH,
-    SLIPPERY,
+    STICKY = "STICKY",
+    SMOOTH = "SMOOTH",
+    SLIPPERY = "SLIPPERY",
 }
 
 enum CandyType {
