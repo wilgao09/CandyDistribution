@@ -2,10 +2,13 @@ import { Scenario } from "../app/types";
 import split from "../test/split.cd.json";
 
 interface CandyTest {
+    name: string;
     scenario: Scenario;
     answer: number[][][];
 }
 
-function bundleTests(): CandyTest[] {
+function getTests(): CandyTest[] {
     return [split];
 }
+
+export default getTests;

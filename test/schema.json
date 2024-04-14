@@ -68,6 +68,9 @@
     },
     "type": "object",
     "properties": {
+        "name": {
+            "type": "string"
+        },
         "scenario": {
             "description": "The scenario",
             "type": "object",
@@ -119,6 +122,6 @@
         }
     },
     "additionalProperties": false,
-    "minProperties": 2,
-    "maxProperties": 2
+    "minProperties": 3,
+    "maxProperties": 3
 }
