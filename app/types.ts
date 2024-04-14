@@ -1,18 +1,16 @@
-enum CandyState {
-    STICKY = "STICKY",
-    SMOOTH = "SMOOTH",
-    SLIPPERY = "SLIPPERY",
-}
+// enum CandyState {
+//     STICKY = "STICKY",
+//     SMOOTH = "SMOOTH",
+//     SLIPPERY = "SLIPPERY",
+// }
 
-enum CandyType {
-    AAA,
-    BBB,
-    PVS,
-    DMZ,
-    FDR,
-    JFK,
-    CARROT,
-}
+// enum CandyType {
+//     PVS = "PVS",
+//     DMZ = "DMZ",
+//     FDR = "FDR",
+//     JFK = "JFK",
+//     CARROT = "CARROT",
+// }
 
 type CandyID = number;
 type ChildID = number;
@@ -22,9 +20,11 @@ interface Candy {
     naturalSugar: number;
     HFCS: number;
     favoriteChild: ChildID;
-    state: CandyState;
+    // state: CandyState;
+    state: string;
     owner: ChildID;
-    type: CandyType;
+    // type: CandyType;
+    type: string;
 }
 
 interface Child {
@@ -37,7 +37,8 @@ interface Child {
 interface Scenario {
     children: Child[];
     candy: Candy[];
-    badCombinations: [CandyType, CandyType][];
+    // badCombinations: [CandyType, CandyType][];
+    badCombinations: [string, string][];
     carrot: Candy;
 }
 
@@ -46,14 +47,16 @@ const CARROT: Candy = {
     naturalSugar: 0,
     HFCS: 0,
     favoriteChild: -1,
-    state: CandyState.SLIPPERY,
+    // state: CandyState.SLIPPERY,
+    state: "SLIPPERY",
     owner: -1,
-    type: CandyType.CARROT,
+    // type: CandyType.CARROT,
+    type: "CARROT",
 };
 
 export {
-    CandyState,
-    CandyType,
+    // CandyState,
+    // CandyType,
     CandyID,
     ChildID,
     Candy,

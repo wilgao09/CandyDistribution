@@ -1,8 +1,8 @@
 import {
     CARROT,
     Candy,
-    CandyState,
-    CandyType,
+    // CandyState,
+    // CandyType,
     Child,
     ChildID,
     Scenario,
@@ -12,7 +12,7 @@ export default class ScenarioBuilder {
     private scenario: Scenario;
     constructor(
         carrot: Candy = CARROT,
-        badCombinations: [CandyType, CandyType][] = []
+        badCombinations: [string, string][] = []
     ) {
         this.scenario = {
             candy: [],
@@ -36,9 +36,9 @@ export default class ScenarioBuilder {
         sugar: number,
         HFCS: number,
         favoriteChild: ChildID,
-        state: CandyState,
+        state: string,
         owner: ChildID,
-        type: CandyType
+        type: string
     ) {
         let nCandy: Candy = {
             id: this.scenario.candy.length,

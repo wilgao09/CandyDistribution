@@ -6,11 +6,26 @@
                 "pvsLimit": 6,
                 "HFCSTolerance": 8,
                 "sugarTolerance": 2
+            },
+            {
+                "id": 1,
+                "pvsLimit": 6,
+                "HFCSTolerance": 8,
+                "sugarTolerance": 2
             }
         ],
         "candy": [
             {
                 "id": 0,
+                "HFCS": 4,
+                "naturalSugar": 1,
+                "type": "PVS",
+                "favoriteChild": -1,
+                "owner": 0,
+                "state": "STICKY"
+            },
+            {
+                "id": 1,
                 "HFCS": 4,
                 "naturalSugar": 1,
                 "type": "PVS",
@@ -30,5 +45,5 @@
             "type": "CARROT"
         }
     },
-    "answer": [[]]
+    "answer": [[[1, 1]]]
 }

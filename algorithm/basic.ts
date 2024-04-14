@@ -1,5 +1,5 @@
-import Distributor from "../../app/distributor";
-import { CandyID, ChildID, Scenario } from "../../app/types";
+import Distributor from "../app/distributor";
+import { CandyID, ChildID, Scenario } from "../app/types";
 
 const distributor: Distributor = {
     solve,
